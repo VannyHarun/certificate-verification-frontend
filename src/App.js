@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Certificate Verification System</h1>
+        <h1>Certificate Certification System</h1>
         {isAdmin ? (
           <div className="admin-controls">
             <span className="user-name">Admin Panel</span>

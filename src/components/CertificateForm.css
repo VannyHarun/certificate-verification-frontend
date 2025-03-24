@@ -1,40 +1,114 @@
 /* src/components/CertificateForm.css */
+.certificate-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
 .certificate-form {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
-  width: 350px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .certificate-form h2 {
-  margin-bottom: 20px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.certificate-form .form-group {
-  margin-bottom: 15px;
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-.certificate-form .form-group label {
+.form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
 }
 
-.certificate-form .form-group input {
+.form-group input {
   width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.certificate-form button {
-  padding: 10px 20px;
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.certificate-form button:hover {
+button:hover:not(:disabled) {
   background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  color: #d32f2f;
+}
+
+.error-message p {
+  margin: 0.5rem 0;
+}
+
+.error-help {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.success-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 4px;
+  color: #2e7d32;
+}
+
+.success-message p {
+  margin: 0.5rem 0;
+}
+
+.success-help {
+  font-size: 0.9rem;
+  color: #2e7d32;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.cert-hash {
+  font-family: monospace;
+  background-color: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  word-break: break-all;
 }

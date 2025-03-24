@@ -1,45 +1,121 @@
 /* src/components/CertificateVerification.css */
 .certificate-verification {
-  border: 1px solid #ccc;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 5px;
-  width: 350px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .certificate-verification h2 {
   margin-bottom: 20px;
+  color: #333;
 }
 
 .certificate-verification .form-group {
   margin-bottom: 15px;
 }
 
-.certificate-verification .form-group label {
+.certificate-verification label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.certificate-verification .form-group input {
+.certificate-verification input {
   width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .certificate-verification button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 .certificate-verification button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
+}
+
+.certificate-verification button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  border-left: 4px solid #d32f2f;
 }
 
 .certificate-details {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-details h3 {
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.certificate-details p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.validation-status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.validation-status.valid {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.validation-status.invalid {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.failure-reason {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #fff3e0;
+  border-radius: 4px;
+  border-left: 4px solid #ff9800;
+  color: #e65100;
+}
+
+.verification-status-section {
   margin-top: 20px;
-  text-align: left;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.certificate-details h4 {
+  margin: 15px 0 10px 0;
+  color: #555;
 }
